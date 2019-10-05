@@ -2,7 +2,7 @@
 
 ## Installation
 
--> npm i -S npm@react-native-mapbox-gl/maps 
++ npm i -S npm@react-native-mapbox-gl/maps 
 
 ## Setting your accessToken
 
@@ -61,10 +61,10 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
 4. android/setting.gradle
 
   ``` js
-  rootProject.name = <YOUR_PROJECT_NAME>
+   rootProject.name = <YOUR_PROJECT_NAME>
 
-+ include ':@react-native-mapbox-gl_maps'
-+ project(':@react-native-mapbox-gl_maps').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-mapbox-gl/maps/android/rctmgl')
+   + include ':@react-native-mapbox-gl_maps'
+   + project(':@react-native-mapbox-gl_maps').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-mapbox-gl/maps/android/rctmgl')
 
    include ':app'
    ```
