@@ -26,7 +26,7 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
         mavenLocal()
         google()
         jcenter()
-+       maven { url "https://jitpack.io" }
+      + maven { url "https://jitpack.io" }
         maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
@@ -49,13 +49,14 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
    
 3. Check Dependencies gradle. pastikan format seperti dibawah ini. 
 
-  android/app/build.gradle
-  dependencies {
+   ```js
+   android/app/build.gradle
+   dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
-+   implementation project(':@react-native-mapbox-gl_maps')
-  }
+   +implementation project(':@react-native-mapbox-gl_maps')
+   }
 
 4. android/setting.gradle
 
