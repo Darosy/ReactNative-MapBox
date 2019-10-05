@@ -1,6 +1,7 @@
 # ReactNative-MapBox
 
 ## Installation
+
 -> npm i -S npm@react-native-mapbox-gl/maps 
 
 ## Setting your accessToken
@@ -16,8 +17,10 @@ import MapboxGL from "@react-native-mapbox-gl/maps";
 MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
 ```
 
-# Setting gradle
+## Setting gradle
+
 1. Check di android/build.gradle
+   ```js
    allprojects {
     repositories {
         mavenLocal()
@@ -30,8 +33,11 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
         }
      }
    }
+   ```
 
 2. Check Buildscript, sesuaikan dengan format dibawah ini.
+   
+   ```js
    buildscript {
     ext {
         buildToolsVersion = "28.0.3"
@@ -39,7 +45,8 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
         targetSdkVersion = 28
     }
    }
-
+   ```
+   
 3. Check Dependencies gradle. pastikan format seperti dibawah ini. 
 
   android/app/build.gradle
@@ -52,9 +59,11 @@ MapboxGL.setAccessToken("<YOUR_ACCESSTOKEN>");
 
 4. android/setting.gradle
 
+  ``` js
   rootProject.name = <YOUR_PROJECT_NAME>
 
 + include ':@react-native-mapbox-gl_maps'
 + project(':@react-native-mapbox-gl_maps').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-mapbox-gl/maps/android/rctmgl')
 
-  include ':app'
+   include ':app'
+   ```
